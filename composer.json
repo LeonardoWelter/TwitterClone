@@ -1,0 +1,19 @@
+{
+  "name": "leonardowelter/miniframework",
+  "license": "proprietary",
+  "require": {
+    "php": ">=7.0"
+  },
+  "authors": [
+    {
+      "name": "Leonardo Welter",
+      "email": "leonardow@email.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "App/",
+      "MF\\": "vendor/MF"
+    }
+  }
+}
