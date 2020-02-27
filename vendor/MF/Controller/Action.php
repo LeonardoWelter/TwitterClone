@@ -12,7 +12,7 @@ abstract class Action {
 
 	protected function render($view) {
 		$this->view->page = $view;
-		require_once '../App/Views/layout1.phtml';
+		require_once '../App/Views/layout.phtml';
 	}
 
 	protected function content() {
