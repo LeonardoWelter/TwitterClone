@@ -2,13 +2,14 @@
 
 namespace App\Controllers;
 
-use App\Models\Usuario;
 use MF\Controller\Action;
 use MF\Model\Container;
 
 class IndexController extends Action{
 
 	public function index() {
+
+		$this->view->login = isset($_GET['login'])? $_GET['login']: '';
 
 		$this->render('index');
 	}
@@ -32,7 +33,7 @@ class IndexController extends Action{
 
 		$usuario->setNome($_POST['nome']);
 		$usuario->setEmail($_POST['email']);
-		$usuario->setSenha($_POST['senha']);
+		$usuario->setSenha(md5($_POST['senha']));
 
 		if ($usuario->validarCadastro() && count($usuario->getUsuarioPorEmail()) == 0) {
 				$usuario->salvar();
