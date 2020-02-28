@@ -43,6 +43,30 @@ class Route extends Bootstrap {
 			'action' => 'sair'
 		);
 
+		$routes['tweet'] = array(
+			'route' => '/tweet',
+			'controller' => 'AppController',
+			'action' => 'tweet'
+		);
+
+		$routes['quemSeguir'] = array(
+			'route' => '/quemSeguir',
+			'controller' => 'AppController',
+			'action' => 'quemSeguir'
+		);
+
+		$routes['acao'] = array(
+			'route' => '/acao',
+			'controller' => 'AppController',
+			'action' => 'acao'
+		);
+
+		$routes['removerTweet'] = array(
+			'route' => '/removerTweet',
+			'controller' => 'AppController',
+			'action' => 'removerTweet'
+		);
+
 		$this->setRoutes($routes);
 	}
 }
